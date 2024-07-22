@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Sidebar</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <button class="logo" onclick="sidebarFunc()">
+            <img src="./images/logo.png" alt="logo" style="width: 22.5px;">
+        </button>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo2">
+            <img src="./images/logo2.png" alt="logo2" style="width: 110px;">
+        </div>
+
+        <!-- Overview link -->
+        <div class="overview">
+            <a href="#">
+                <i class='bx bxs-home'></i>
+                <p>Project Overview</p>
+                <i class='bx bxs-cog' id="cog"></i>
+            </a>
+        </div>
+
+        <!-- Generative AI link -->
+        <div class="ai">
+            <span>Generative AI</span>
+            <a href="#">
+                <i class='bx bxs-star'></i>
+                <p>Build with Gemini</p>
+                <p id="new">NEW</p>
+            </a>
+        </div>
+
+        <!-- Dropdowns -->
+        <div class="ai">
+            <span>Product categories</span>
+            <div class="drops">
+
+                <!-- Build -->
+                <div class="list">
+                    <div class="list-name" onclick="buildFunc()">
+                        <p>Build</p>
+                        <i class='bx bxs-chevron-down'></i>
+                    </div>
+                    <div class="links" id="build">
+                        <a href="#">
+                            <i class='bx bx-check-shield'></i>
+                            <p>App Check</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-server'></i>
+                            <p>App Hosting</p>
+                            <p id="new">NEW</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-user-account'></i>
+                            <p>Authentication</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-sitemap'></i>
+                            <p>Data Connect</p>
+                            <p id="new">NEW</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-extension'></i>
+                            <p>Extensions</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-cube-alt'></i>
+                            <p>Firestore Database</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-code-curly'></i>
+                            <p>Functions</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-planet'></i>
+                            <p>Hosting</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-package'></i>
+                            <p>Machine Learning</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-time'></i>
+                            <p>Realtime Database</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-folder-open'></i>
+                            <p>Storage</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Run -->
+                <div class="list" onclick="runFunc()">
+                    <div class="list-name">
+                        <p>Run</p>
+                        <i class='bx bxs-chevron-down'></i>
+                    </div>
+                    <div class="links" id="run">
+                        <a href="#">
+                            <i class='bx bx-test-tube'></i>
+                            <p>A/B Testing</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-adjust'></i>
+                            <p>AdMob</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-car'></i>
+                            <p>App Distribution</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-analyse'></i>
+                            <p>Crashlytics</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-link-alt'></i>
+                            <p>Dynamic Links</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-message-square-dots'></i>
+                            <p>Messaging</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-objects-vertical-bottom'></i>
+                            <p>Performance</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-rocket'></i>
+                            <p>Release Monitoring</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-directions'></i>
+                            <p>Remote Config</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-calendar-check'></i>
+                            <p>Test Lab</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Analytics -->
+                <div class="list">
+                    <div class="list-name" onclick="analyticsFunc()">
+                        <p>Analytics</p>
+                        <i class='bx bxs-chevron-down'></i>
+                    </div>
+                    <div class="links" id="analytics">
+                        <a href="#">
+                            <i class='bx bxs-dashboard'></i>
+                            <p>Dashboard</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-time-five'></i>
+                            <p>Realtime Analytics</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-podcast'></i>
+                            <p>Events</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-flag-alt'></i>
+                            <p>Key Events</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-file'></i>
+                            <p>Audience</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bx-shape-triangle'></i>
+                            <p>Custom Definitions</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-rocket'></i>
+                            <p>Latest Release</p>
+                        </a>
+                        <a href="#">
+                            <i class='bx bxs-key'></i>
+                            <p>DebugView</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- All products link -->
+        <div class="ai">
+            <a href="#">
+                <i class='bx bxs-grid'></i>
+                <p>All products</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="before" onclick="sidebarFunc()"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
