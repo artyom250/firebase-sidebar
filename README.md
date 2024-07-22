@@ -1,4 +1,3 @@
-![Example Image](./images/final.png)
 ![Example Image](./images/final2.png)
 
 ## Firebase Sidebar
